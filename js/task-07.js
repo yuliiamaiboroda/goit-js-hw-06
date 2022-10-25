@@ -8,12 +8,5 @@ const maxSizeOfText = inputRangeEl.getAttribute('max');
 
 inputRangeEl.addEventListener('input', changeTextSizeHandle);
 function changeTextSizeHandle (){
-  if(inputRangeEl.value>= minSizeOfText && inputRangeEl.value<= maxSizeOfText)
-  {textOfInputEl.style.fontSize = inputRangeEl.value + 'px';}
-  else if ( inputRangeEl.value < minSizeOfText){
-    textOfInputEl.style.fontSize =  minSizeOfText + 'px';
-  }
-  else {
-    textOfInputEl.style.fontSize = maxSizeOfText + 'px';
-  }
+  textOfInputEl.style.fontSize = inputRangeEl.value + 'px';
 }
