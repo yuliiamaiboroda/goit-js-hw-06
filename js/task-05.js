@@ -5,5 +5,7 @@ inputEl.addEventListener('input', changeNameByInputHadler);
 function changeNameByInputHadler () {
 if(inputEl.value){
     nameGreetingEl.textContent = inputEl.value;
+} else{
+    nameGreetingEl.textContent = 'Anonymous';
 }
 }
