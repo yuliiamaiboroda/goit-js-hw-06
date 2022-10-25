@@ -5,11 +5,14 @@ inputsFormEl.addEventListener('submit', submitFormHander);
 function submitFormHander(event){
     event.preventDefault();
     const {elements:{email , password}} = event.currentTarget;
-    password.setAttribute("autocomplete", "current-password");
-    if (email.value  || password.value ){
+    if (!email.value  || !password.value ){
         return alert('Заповніть всі поля!')
     }
-    console.log(`email: ${email.value}, Password: ${password.value}`);
+    const userLogObj = {
+        email: email.value,
+        password: password.value,
+    }
+    console.log(userLogObj);
 
     event.currentTarget.reset();
 }
